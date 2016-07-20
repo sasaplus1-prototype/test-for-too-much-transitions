@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+    <title>test page for too much transitions</title>
+    <style>
+      .frame {
+        border: 1px solid #cccccc;
+        height: 240px;
+        overflow: hidden;
+        position: relative;
+        width: 320px;
+      }
+
+      .frame .reel {
+        height: 3600px;
+        width: 320px;
+      }
+
+      .frame .reel img {
+        display: block;
+      }
+
+      .frame .reel img:nth-child(2n) {
+        -webkit-filter: sepia(60%);
+        -moz-filter: sepia(60%);
+        filter: sepia(60%);
+      }
+
+      .slot {
+        -webkit-transition: -webkit-transform 5s ease 0s;
+        -webkit-transition: transform 5s ease 0s;
+        -moz-transition: -moz-transform 5s ease 0s;
+        -moz-transition: transform 5s ease 0s;
+        transition: transform 5s ease 0s;
+      }
+    </style>
+  </head>
+  <body>
+    <p>move frame</p>
+    <div class="frame">
+      <div id="js-reel-1" class="reel slot">
+        <img src="cat.jpg" width="320" height="240">
+        <img src="cat.jpg" width="320" height="240">
+        <img src="cat.jpg" width="320" height="240">
+        <img src="cat.jpg" width="320" height="240">
+        <img src="cat.jpg" width="320" height="240">
+        <img src="cat.jpg" width="320" height="240">
+        <img src="cat.jpg" width="320" height="240">
+        <img src="cat.jpg" width="320" height="240">
+        <img src="cat.jpg" width="320" height="240">
+        <img src="cat.jpg" width="320" height="240">
+        <img src="cat.jpg" width="320" height="240">
+        <img src="cat.jpg" width="320" height="240">
+        <img src="cat.jpg" width="320" height="240">
+        <img src="cat.jpg" width="320" height="240">
+        <img src="cat.jpg" width="320" height="240">
+      </div>
+    </div>
+    <input id="js-execute-1" type="button" value="execute 1">
+    <input id="js-reset-1" type="button" value="reset 1">
+
+    <p>move items</p>
+    <div class="frame">
+      <div id="js-reel-2" class="reel">
+        <img class="slot" src="cat.jpg" width="320" height="240">
+        <img class="slot" src="cat.jpg" width="320" height="240">
+        <img class="slot" src="cat.jpg" width="320" height="240">
+        <img class="slot" src="cat.jpg" width="320" height="240">
+        <img class="slot" src="cat.jpg" width="320" height="240">
+        <img class="slot" src="cat.jpg" width="320" height="240">
+        <img class="slot" src="cat.jpg" width="320" height="240">
+        <img class="slot" src="cat.jpg" width="320" height="240">
+        <img class="slot" src="cat.jpg" width="320" height="240">
+        <img class="slot" src="cat.jpg" width="320" height="240">
+        <img class="slot" src="cat.jpg" width="320" height="240">
+        <img class="slot" src="cat.jpg" width="320" height="240">
+        <img class="slot" src="cat.jpg" width="320" height="240">
+        <img class="slot" src="cat.jpg" width="320" height="240">
+        <img class="slot" src="cat.jpg" width="320" height="240">
+      </div>
+    </div>
+    <input id="js-execute-2" type="button" value="execute 2">
+    <input id="js-reset-2" type="button" value="reset 2">
+
+    <script src="index.js"></script>
+  </body>
+</html>
